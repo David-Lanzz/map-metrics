@@ -1,0 +1,29 @@
+.flex {
+    display: flex;
+}
+.col {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.elements {
+    height: 10rem;
+    width: 100%;
+    border: #333 solid 1px;
+}
+.absolute {
+    position: relative;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    right: -8rem;
+}
