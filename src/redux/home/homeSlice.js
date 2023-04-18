@@ -19,6 +19,15 @@ export const getData = createAsyncThunk('data/getdata', async ()=> {
                 index: i
             }
         })
+        const collect = []
+        for(let i = 0;i < filtereddata.length;i++){
+            const collected = {}
+if(!filtereddata[i].state){
+    collected.country = filtereddata[i].country
+    collect.push(collected)
+}
+        }
+        console.log(collect)
     return filtereddata
 })
 const initialState = {
@@ -30,6 +39,12 @@ error: false
 const homeSlice = createSlice({
     name: 'home/displayhome',
     initialState,
+    reducers: {
+        displaydata: (state,{payload})=> {
+            const filtereddata = state.data.filter(element => element.country === payload)
+            return {...state,data: filtereddata}
+        }
+        },
     extraReducers: (builders) => {
         builders
         .addCase(getData.pending, (state)=>( {
@@ -42,7 +57,7 @@ const homeSlice = createSlice({
             ...state, loading: false,error: true
         }))
     }
-    
 })
+export const { displaydata } = homeSlice.actions
 
 export default homeSlice.reducer
