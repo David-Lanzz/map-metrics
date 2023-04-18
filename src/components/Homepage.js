@@ -1,18 +1,27 @@
 import { useSelector } from "react-redux"
-import "../styles/home.css"
+import { useState } from "react"
+import Unfilteredcountries from "./Unfilteredcountries"
+import Filteredcountries from "./Filteredcountries"
 const Homepage = () => {
-    const store = useSelector((store)=> store.homeReducer)
-    const { data } = store
-    console.log(data)
-  return (
-    <ul className="grid">
-{data.map(element => {
-  return (
-    <li className="elements flex col"><button className="absolute">btn</button><p>{element.country}</p></li>
-  )
-})}
-    </ul>
-  )
+  const store = useSelector((store) => store.homeReducer)
+  const { data } = store
+  const filtered = data.filter(element => !element.state)
+  const [input,changeInput] = useState('')
+   const [searching,changeSearching] = useState(false)
+  const handlechange = (e)=> {
+    changeInput(e.target.value)
+  }
+   const search = ()=> {
+  changeSearching(true)
+   }
+  if(!searching) {
+    return (
+      <Unfilteredcountries filtered={filtered} handlechange={handlechange} input={input} search={search}/>
+    )
+  }
+   else {
+   return(<Filteredcountries filtered={filtered} handlechange={handlechange} input={input} search={search}/>)
+   }
 }
 
 export default Homepage
