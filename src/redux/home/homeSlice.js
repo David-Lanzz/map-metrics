@@ -4,18 +4,19 @@ const url = 'https://coronavirus.m.pipedream.net/'
 export const getData = createAsyncThunk('data/getdata', async ()=> {
       const fetchdata = await axios.get(url)
         const {data} = fetchdata
-       const spliced = data.rawData.splice(0,500)
-       console.log(spliced)
-        const filtereddata = spliced.map((element)=> {
+       let i = 0
+        const filtereddata = data.rawData.map((element)=> {
+            i += 1
             return {
                 country: element.Country_Region,
-                Deaths: element.Deaths,
+                deaths: element.Deaths,
                 irate: element.Incident_Rate,
                 lat: element.Lat,
                 long: element.Long,
                 cfr: element.Case_Fatality_Ratio,
-                state: element.Province_State
-
+                state: element.Province_State,
+                confirmed: element.Confirmed,
+                index: i
             }
         })
     return filtereddata
