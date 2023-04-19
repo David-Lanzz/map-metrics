@@ -1,86 +1,113 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .row {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 .center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .board {
-    width: 100%;
-    height: 15rem;
-    background-image: url('../images/main.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-content: center;
-    background-position: top;
+  width: 100%;
+  height: 15rem;
+  background-image: url('../images/main.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  background-position: top;
 }
-.box,.absolute {
-    width: 1rem;
-    height: 1rem;
+
+.box,
+.absolute {
+  width: 1rem;
+  height: 1rem;
 }
+
 .box {
-    background-color: #d4af37;
+  background-color: #d4af37;
 }
+
 .sig {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 .elements {
-    border: #cbcbd4 solid 1px;
-    padding: 0 0.5rem;
-   background-color: rgb(42, 42, 141);
+  border: #cbcbd4 solid 1px;
+  padding: 0 0.5rem;
+  background-color: rgb(23, 23, 68);
+  text-decoration: none;
+  animation: display 0.5s;
+}
+
+.loading {
+  color: #333;
+}
+
+@keyframes display {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }
 
 .absolute {
-    position: relative;
-    top: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    right: -92%;
-    transform: rotate(90deg);
+  position: relative;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  right: -92%;
+  transform: rotate(90deg);
 }
+
 .elements:hover {
-    transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .country {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .data {
-margin: 60% 0 5% 0;
-text-align: end;
+  margin: 60% 0 5% 0;
+  text-align: end;
 }
+
 .article {
-    margin-left: 60%;
+  margin-left: 60%;
 }
-.article p {
-    color: #ffd035;
+
+.article p,
+.confirmed {
+  color: #ffd035;
 }
+
 .parent {
-    width: 100%;
+  width: 100%;
 }
-@media screen and (min-width: 768px){
-    .grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 1rem;
-    }
-    .elements {
-        border-bottom-left-radius: 2rem;
-    }
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .elements {
+    border-bottom-left-radius: 2rem;
+  }
 }
