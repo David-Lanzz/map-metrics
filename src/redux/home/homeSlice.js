@@ -11,10 +11,6 @@ export const getData = createAsyncThunk('data/getdata', async () => {
     return {
       country: element.Country_Region,
       deaths: element.Deaths,
-      irate: element.Incident_Rate,
-      lat: element.Lat,
-      long: element.Long,
-      cfr: element.Case_Fatality_Ratio,
       state: element.Province_State,
       confirmed: element.Confirmed,
       index: i,
