@@ -58,7 +58,7 @@ export const getData = createAsyncThunk('data/getdata', async () => {
       for (let j = 0; j < newarr.length; j += 1) {
         if (filtereddata[i].country === newarr[j].country) {
           newarr[j].states.push(filtereddata[i]);
-          newarr[j].confirmed += +filtereddata[i].deaths;
+          newarr[j].confirmed += +filtereddata[i].confirmed;
         }
       }
     }
