@@ -9,7 +9,7 @@ const CountryData = () => {
     <section>
       <div className="board flex col">
         {' '}
-        <NavLink to="/" className="homekey"><i className="fa-solid fa-house home" /></NavLink>
+        <NavLink to="/" className="homekey"><i className="fa-sharp fa-solid fa-chevron-left homekey" /></NavLink>
         {' '}
         <h1 className="country2">{country}</h1>
       </div>

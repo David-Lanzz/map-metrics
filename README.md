@@ -64,7 +64,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> No live demo link yet
+> [Live-Demo]("https://mapmetrics.onrender.com/")
+> [Loom Presentation]("https://www.loom.com/share/1dbc6515012342daab42af84bf1180d1")
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +165,7 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > 
-I will like to give kudos to microverse for assigning the creation of this project to me.
+I will like to give kudos to [Cindy Shinman]("https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)") for the original design of the template used for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
