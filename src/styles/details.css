@@ -1,0 +1,49 @@
+.detail {
+  height: 10rem;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+  border-top-right-radius: 1rem;
+}
+
+.detail article {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.green {
+  color: rgb(104, 197, 104);
+}
+
+.home {
+  font-size: 1.4rem;
+  margin: 1rem 0 0 1rem;
+}
+
+.homekey {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.detailsparent {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #cbcbd4;
+}
+
+.country2 {
+  font-size: 2rem;
+}
+
+.deaths {
+  color: rgb(221, 31, 31);
+}
+
+@media screen and (min-width: 768px) {
+  .detailsparent {
+    grid-template-columns: 1fr 1fr;
+  }
+}

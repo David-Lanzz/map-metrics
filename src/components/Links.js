@@ -1,12 +1,11 @@
-import { NavLink } from "react-router-dom"
-const Links = ({links}) => {
-  return (
-    links.map(link => {
-       return (<li key={link.path}>
-<NavLink to={link.path}>{link.text}</NavLink>
-       </li>)
-    })
-  )
-}
+import { NavLink } from 'react-router-dom';
 
-export default Links
+const Links = ({ links }) => (
+  links.map((link) => (
+    <li key={link.path}>
+      <NavLink to={link.path}>{link.text}</NavLink>
+    </li>
+  ))
+);
+
+export default Links;
